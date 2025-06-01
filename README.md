@@ -14,43 +14,54 @@ This project is a web application for recognizing handwritten digits (0–9) usi
 
 ---
 
+### About MNIST dataset:
+The MNIST database (Modified National Institute of Standards and Technology database) of handwritten digits consists of a training set of 60,000 examples, and a test set of 10,000 examples. It is a subset of a larger set available from NIST. Additionally, the black and white images from NIST were size-normalized and centered to fit into a 28x28 pixel bounding box and anti-aliased, which introduced grayscale levels.
+
+---
+
 ## Neural Network Architecture
 
-The CNN model consists of:
+This CNN model follows a **feedforward architecture** where layers are stacked sequentially:
 
-- 2 Convolutional layers with ReLU activation
-- 1 MaxPooling layer to reduce dimensionality
-- 1 Fully connected Dense hidden layer
-- 1 Output layer with Softmax activation for 10-class classification (digits 0–9)
-
----
-
-## Dataset: MNIST
-
-- 60,000 training images
-- 10,000 test images
-- 28x28 grayscale images, centered, normalized
-- Widely used benchmark for digit recognition
+- **Input Layer**: Accepts 28x28 grayscale images
+- **Convolutional Layers**: Extract spatial features using filters and ReLU activation
+- **MaxPooling Layer**: Downsamples feature maps to reduce dimensionality
+- **Dense Layer**: Fully connected for higher-level reasoning
+- **Output Layer**: Softmax activation classifies input into one of 10 digits (0–9)
 
 ---
-
-## Installation & Setup
-
-### Prerequisites
+## Prerequisites
 
 - Python 3.10
-- pip
+- TensorFlow 2.x
+- NumPy
+- OpenCV
+- Pillow
+- Streamlit
+---
 
-### Steps
 
-1. Clone the repository:
+## Getting Started
 
-git clone https://github.com/yourusername/handwritten-digit-recognition.git
-cd handwritten-digit-recognition
+How to use
+```    
+git clone https://github.com/rida2911/handwritten-digit-recognition.git
+cd Handwritten-Digit-Recognition
+```
+Install dependencies
+```
+pip install -r requirements.txt
+```
+Run the Application
 
-Create and activate a virtual environment:
-python -m venv venv
-venv\Scripts\activate   # On Windows
+```
+streamlit run app.py
+```
+
+
+
+
+
 
 
 
