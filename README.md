@@ -58,6 +58,11 @@ Run the Application
 streamlit run app.py
 ```
 
+## Result:
+Following image is the prediction of the model.
+![result](https://github.com/user-attachments/assets/8f4fed1a-0abd-49b1-be18-cfc1eaac8a69)
+
+
 
 
 
